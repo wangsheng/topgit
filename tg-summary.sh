@@ -79,10 +79,7 @@ EOT
 }
 
 txt_driver() {
-    which graph-easy >/dev/null || { 
-        echo '"graph-easy" not found. See http://search.cpan.org/dist/Graph-Easy/'
-        exit 1 
-    }
+    which graph-easy >/dev/null || die '"graph-easy" not found. See http://search.cpan.org/dist/Graph-Easy/'
     dot_driver | graph-easy --as=ascii --from=dot 2>/dev/null
 }
 
