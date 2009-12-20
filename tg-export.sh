@@ -195,7 +195,7 @@ quilt()
 	else
 		if "$numbered"; then
 			number="$(echo $(($(cat "$playground/^number" 2>/dev/null) + 1)))";
-			bn="$(printf "%04u-$bn" $number)";
+			bn="$(printf "%04u0-$bn" $number)";
 			echo "$number" >"$playground/^number";
 		fi;
 
